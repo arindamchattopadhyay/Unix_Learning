@@ -30,6 +30,8 @@ echo "Use of for loop"
 awk 'BEGIN {for(i=0;i<10;i++) print i}'
 echo "Use of while loop"
 awk 'BEGIN {while(i<10){i++; print i;}}'
+#Remove last column in a file
+awk -v OFS="|" -F '|' '{NF--}1' filename
 <<comm
 data file
 --------------------
